@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vinicio Rodrigues Advocacia | Familia, Pensao e Divorcio</title>
+  <meta name="description" content="Atendimento juridico humano e acessivel para pensao, guarda e divorcio. Fale com um advogado pelo WhatsApp.">
+  <style>
+    :root {
+      --ink: #111111;
+      --coal: #191919;
+      --soft-ink: #333333;
+      --muted: #6c6a66;
+      --line: #e6e1d8;
+      --paper: #fbfaf7;
+      --white: #ffffff;
+      --gold: #b49763;
+      --gold-dark: #80673d;
+      --warm: #f1ede5;
+      --shadow: 0 22px 55px rgba(17, 17, 17, .10);
+      --radius: 8px;
+      --container: min(1120px, calc(100vw - 32px));
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img,
+    svg {
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    summary {
+      font: inherit;
+    }
+
+    .page {
+      overflow: hidden;
+    }
+
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px 0;
+      color: var(--white);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-14px);
+      transition: opacity .25s ease, transform .25s ease, background .25s ease, backdrop-filter .25s ease;
+    }
+
+    .site-header.is-scrolled {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+      background: rgba(12, 12, 12, .72);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, .16);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 38px;
+      object-fit: contain;
+      filter: invert(1) brightness(1.9);
+      opacity: .92;
+    }
+
+    .brand-name {
+      display: grid;
+      gap: 1px;
+      min-width: 0;
+    }
+
+    .brand-name strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-name span {
+      color: rgba(255, 255, 255, .68);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .brand-name .brand-oab {
+      color: rgba(255, 255, 255, .58);
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 0 14px;
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .86rem;
+      font-weight: 700;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      height: 100svh;
+      isolation: isolate;
+      color: var(--white);
+      background: var(--coal);
+    }
+
+    .hero-media,
+    .hero-media picture,
+    .hero-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-media {
+      z-index: -2;
+    }
+
+    .hero-media img {
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(9, 9, 9, .02) 0%, rgba(10, 10, 10, .06) 34%, rgba(9, 9, 9, .64) 62%, rgba(9, 9, 9, .98) 100%);
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 100vh;
+      height: 100svh;
+      padding: 0;
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 16px;
+      max-width: 660px;
+      margin: 0 auto clamp(30px, 10svh, 58px);
+      justify-items: center;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      width: fit-content;
+      color: rgba(255, 255, 255, .82);
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 16ch;
+      font-size: clamp(1.62rem, 6.8vw, 2.38rem);
+    }
+
+    .hero-copy > p {
+      max-width: 560px;
+      color: rgba(255, 255, 255, .8);
+      font-size: 1.04rem;
+    }
+
+    .hero-actions {
+      display: grid;
+      gap: 12px;
+      margin-top: 0;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, #6f5523 0%, #d7bd78 18%, #fff0b0 34%, #a9873d 52%, #f1d993 72%, #735724 100%);
+      color: var(--ink);
+      font-size: .95rem;
+      font-weight: 850;
+      text-align: center;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .58),
+        inset 0 -1px 0 rgba(84, 62, 22, .34),
+        0 16px 34px rgba(180, 151, 99, .32);
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background:
+        linear-gradient(135deg, #806225 0%, #e3ca83 18%, #fff5be 34%, #b69347 52%, #f8e3a2 72%, #846527 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .66),
+        inset 0 -1px 0 rgba(84, 62, 22, .28),
+        0 18px 38px rgba(180, 151, 99, .4);
+    }
+
+    .button svg {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 auto;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 9px;
+      color: rgba(255, 255, 255, .7);
+      font-size: .86rem;
+    }
+
+    .hero-note svg {
+      width: 17px;
+      height: 17px;
+      color: var(--gold);
+      flex: 0 0 auto;
+    }
+
+    .trust-row {
+      overflow: hidden;
+      width: 100%;
+      background:
+        linear-gradient(180deg, #171717 0%, #0f0f0f 52%, #161616 100%);
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .trust-track {
+      display: flex;
+      width: max-content;
+      animation: trust-marquee 13s linear infinite;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 62px;
+      padding: 16px 26px;
+      color: transparent;
+      background: linear-gradient(110deg, #f8f8f8 0%, #b7b7b7 18%, #ffffff 36%, #8e8e8e 56%, #e9e9e9 74%, #a6a6a6 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      font-size: .9rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .trust-item svg {
+      width: 20px;
+      height: 20px;
+      color: var(--gold);
+      flex: 0 0 auto;
+    }
+
+    @keyframes trust-marquee {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+
+      to {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    .pain,
+    .method,
+    .faq {
+      padding: 70px 0;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      color: var(--gold-dark);
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .section-kicker::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .section-title {
+      max-width: 700px;
+      color: var(--ink);
+      font-size: clamp(1.85rem, 8vw, 2.6rem);
+    }
+
+    .section-text {
+      max-width: 720px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .pain {
+      background: var(--paper);
+    }
+
+    .pain-grid {
+      display: grid;
+      gap: 28px;
+    }
+
+    .pain-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pain-list li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      align-items: center;
+      gap: 12px;
+      min-height: 58px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .72);
+      color: var(--soft-ink);
+      font-weight: 750;
+      box-shadow: 0 14px 34px rgba(17, 17, 17, .04);
+    }
+
+    .pain-list .icon-box {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fff7e4;
+      color: #8a6a21;
+    }
+
+    .pain-list svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .pain-actions,
+    .method-action {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section-action {
+      display: inline-flex;
+      width: fit-content;
+      margin-top: 6px;
+    }
+
+    .method {
+      background: var(--warm);
+      border-block: 1px solid var(--line);
+    }
+
+    .method-head {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(128, 103, 61, .22);
+      counter-increment: step;
+    }
+
+    .step:last-child {
+      border-bottom: 0;
+    }
+
+    .step-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(128, 103, 61, .28);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, .55);
+      color: var(--gold-dark);
+    }
+
+    .step-icon svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .step h3 {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+
+    .step h3::before {
+      content: "0" counter(step);
+      color: var(--gold-dark);
+      font-size: .73rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .faq {
+      background: var(--paper);
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 28px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 16px 38px rgba(17, 17, 17, .045);
+    }
+
+    summary {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 64px;
+      padding: 17px 18px;
+      color: var(--ink);
+      font-weight: 850;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold-dark);
+      flex: 0 0 auto;
+      transition: transform .2s ease;
+    }
+
+    details[open] summary svg {
+      transform: rotate(45deg);
+    }
+
+    details p {
+      padding: 0 18px 18px;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .final-cta {
+      position: relative;
+      padding: 72px 0 92px;
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(17, 17, 17, .96), rgba(41, 40, 37, .94)),
+        var(--coal);
+      isolation: isolate;
+    }
+
+    .final-cta::before {
+      content: "VR";
+      position: absolute;
+      z-index: -1;
+      right: -30px;
+      bottom: -70px;
+      color: rgba(255, 255, 255, .035);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 13rem;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .final-content {
+      display: grid;
+      gap: 22px;
+    }
+
+    .final-cta .section-kicker {
+      color: var(--gold);
+    }
+
+    .final-cta .section-title {
+      color: var(--white);
+    }
+
+    .final-cta .section-text {
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .footer {
+      padding: 26px 0 92px;
+      background: #0f0f0f;
+      color: rgba(255, 255, 255, .58);
+      font-size: .82rem;
+    }
+
+    .footer-inner {
+      display: grid;
+      gap: 8px;
+    }
+
+    .mobile-sticky {
+      position: fixed;
+      z-index: 20;
+      right: 18px;
+      bottom: 18px;
+      left: auto;
+    }
+
+    .mobile-sticky .button {
+      width: 58px;
+      height: 58px;
+      min-height: 58px;
+      padding: 0;
+      border-radius: 50%;
+      font-size: 0;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .62),
+        0 18px 36px rgba(17, 17, 17, .26);
+    }
+
+    .mobile-sticky .button svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    @media (min-width: 620px) {
+      :root {
+        --container: min(1120px, calc(100vw - 56px));
+      }
+
+      .nav-link {
+        display: inline-flex;
+      }
+
+      .hero-actions {
+        width: fit-content;
+      }
+
+      .trust-item {
+        padding: 18px 34px;
+        border-left: 1px solid rgba(255, 255, 255, .12);
+      }
+
+      .trust-item:first-child {
+        border-left: 0;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .site-header {
+        position: absolute;
+        padding: 24px 0;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+      }
+
+      .site-header.is-scrolled {
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+      }
+
+      .brand-mark {
+        width: 56px;
+        height: 46px;
+      }
+
+      .brand-name strong {
+        font-size: 1.12rem;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(90deg, rgba(10, 10, 10, .86) 0%, rgba(10, 10, 10, .58) 28%, rgba(10, 10, 10, .08) 58%, rgba(10, 10, 10, .06) 100%),
+          linear-gradient(180deg, rgba(10, 10, 10, .22), rgba(10, 10, 10, .08));
+      }
+
+      .hero-media img {
+        object-position: center center;
+      }
+
+      .hero-inner {
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+        height: 100svh;
+        padding: 0;
+      }
+
+      .hero-copy {
+        margin: 0;
+        justify-items: start;
+        text-align: left;
+      }
+
+      h1 {
+        max-width: 16ch;
+        font-size: clamp(2.35rem, 3.4vw, 3.35rem);
+      }
+
+      .hero-copy > p {
+        font-size: 1.14rem;
+      }
+
+      .pain,
+      .method,
+      .faq {
+        padding: 98px 0;
+      }
+
+      .pain-grid,
+      .faq-grid {
+        grid-template-columns: minmax(0, .9fr) minmax(360px, 1fr);
+        align-items: start;
+        gap: 72px;
+      }
+
+      .method-head {
+        grid-template-columns: .8fr 1fr;
+        align-items: end;
+        gap: 72px;
+      }
+
+      .section-title {
+        font-size: clamp(2.45rem, 3.5vw, 3.35rem);
+      }
+
+      .steps {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        border-top: 1px solid rgba(128, 103, 61, .22);
+        border-bottom: 1px solid rgba(128, 103, 61, .22);
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+        align-content: start;
+        min-height: 250px;
+        padding: 28px 22px;
+        border-right: 1px solid rgba(128, 103, 61, .22);
+        border-bottom: 0;
+      }
+
+      .step:last-child {
+        border-right: 0;
+      }
+
+      .final-cta {
+        padding: 98px 0;
+      }
+
+      .final-content {
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 60px;
+      }
+
+      .final-copy {
+        max-width: 720px;
+      }
+
+      .footer {
+        padding-bottom: 28px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+
+      .trust-track {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header" aria-label="Cabecalho">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Vinicio Rodrigues Advocacia">
+          <img class="brand-mark" src="logo.png" alt="" width="351" height="287">
+          <span class="brand-name">
+            <strong>Vinicio Rodrigues</strong>
+            <span>Advocacia</span>
+            <span class="brand-oab">OAB/UF 000.000</span>
+          </span>
+        </a>
+        <a class="nav-link" href="#faq" aria-label="Ir para duvidas frequentes">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 17h.01M9.1 9a3 3 0 1 1 4.45 2.62c-.91.49-1.55 1.18-1.55 2.38" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.9"/>
+          </svg>
+          Dúvidas
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <picture>
+            <source media="(min-width: 760px)" srcset="desktop-hero-bg.jpg">
+            <img src="mobile-hero-bg.jpg" alt="" width="508" height="618" fetchpriority="high">
+          </picture>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Direito de família</span>
+            <h1 id="hero-title">Problemas com pensão, guarda ou divórcio? Proteja seus direitos e os de seus filhos com segurança e agilidade.</h1>
+            <p>Atendimento jurídico humano e acessível. Analisamos sua situação e direcionamos o melhor caminho direto pelo seu WhatsApp.</p>
+            <div class="hero-actions">
+              <a class="button" href="https://wa.me/5500000000000?text=Olá%2C%20preciso%20de%20orientação%20sobre%20pensão%2C%20guarda%20ou%20divórcio." target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2a9.88 9.88 0 0 0-8.46 14.96L2.24 22l5.16-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.9 12.33 8.07 8.07 0 0 1-9.42 3.03l-.34-.15-3.16.8.82-3.08-.18-.36A8.08 8.08 0 0 1 12.04 3.8Zm-3.6 3.95c-.18 0-.47.07-.72.35-.25.27-.95.93-.95 2.26 0 1.34.98 2.63 1.11 2.82.14.18 1.9 3.04 4.75 4.14 2.37.93 2.85.75 3.36.7.52-.05 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.11-.26-.18-.54-.32-.27-.13-1.66-.82-1.91-.91-.26-.1-.45-.14-.64.13-.18.28-.73.91-.9 1.1-.16.18-.33.2-.6.06-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.66-1.55-1.94-.17-.27-.02-.42.12-.56.13-.12.28-.32.42-.48.13-.16.18-.27.27-.46.1-.18.05-.34-.02-.48-.07-.13-.62-1.53-.87-2.1-.23-.54-.46-.55-.64-.56h-.54Z"/>
+                </svg>
+                Falar com um Advogado no WhatsApp Agora
+              </a>
+              <span class="hero-note">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 7 9 18l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Resposta direta, sigilosa e sem burocracia.
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="trust-row" aria-label="Diferenciais do atendimento">
+        <div class="trust-track">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Atendimento pelo WhatsApp
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Sigilo e orientação clara
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Agilidade para regularizar
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Atendimento pelo WhatsApp
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Sigilo e orientação clara
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Agilidade para regularizar
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Atendimento pelo WhatsApp
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Sigilo e orientação clara
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Agilidade para regularizar
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Atendimento pelo WhatsApp
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Sigilo e orientação clara
+          </div>
+          <div class="trust-item" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 6v6l4 2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Agilidade para regularizar
+          </div>
+        </div>
+      </div>
+
+      <section class="pain" aria-labelledby="pain-title">
+        <div class="container pain-grid">
+          <div>
+            <span class="section-kicker">Empatia</span>
+            <h2 class="section-title" id="pain-title">Sabemos que a separação é um momento delicado e desgastante.</h2>
+            <p class="section-text">Não deixe que a falta de informação prolongue conflitos, atrase a pensão ou prejudique o convívio com seus filhos. Lidar com isso sem a orientação certa pode gerar:</p>
+          </div>
+          <div class="pain-actions">
+            <ul class="pain-list" aria-label="Riscos de lidar sem orientacao juridica">
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 17h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Processos lentos e intermináveis.
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 17h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Acúmulo de pensões atrasadas.
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 17h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Desgaste emocional e exposição familiar.
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 17h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Insegurança sobre o futuro financeiro e a guarda.
+            </li>
+            </ul>
+            <a class="button section-action" href="https://wa.me/5500000000000?text=Olá%2C%20preciso%20resolver%20uma%20situação%20de%20pensão%2C%20guarda%20ou%20divórcio." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2a9.88 9.88 0 0 0-8.46 14.96L2.24 22l5.16-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.9 12.33 8.07 8.07 0 0 1-9.42 3.03l-.34-.15-3.16.8.82-3.08-.18-.36A8.08 8.08 0 0 1 12.04 3.8Zm-3.6 3.95c-.18 0-.47.07-.72.35-.25.27-.95.93-.95 2.26 0 1.34.98 2.63 1.11 2.82.14.18 1.9 3.04 4.75 4.14 2.37.93 2.85.75 3.36.7.52-.05 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.11-.26-.18-.54-.32-.27-.13-1.66-.82-1.91-.91-.26-.1-.45-.14-.64.13-.18.28-.73.91-.9 1.1-.16.18-.33.2-.6.06-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.66-1.55-1.94-.17-.27-.02-.42.12-.56.13-.12.28-.32.42-.48.13-.16.18-.27.27-.46.1-.18.05-.34-.02-.48-.07-.13-.62-1.53-.87-2.1-.23-.54-.46-.55-.64-.56h-.54Z"/>
+              </svg>
+              Quero orientação pelo WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="method" aria-labelledby="method-title">
+        <div class="container">
+          <div class="method-head">
+            <div>
+              <span class="section-kicker">Como funciona</span>
+              <h2 class="section-title" id="method-title">Orientação jurídica clara, próxima e focada na solução.</h2>
+            </div>
+            <p class="section-text">Um atendimento simples e transparente para você entender seus direitos, tomar decisões com segurança e iniciar as medidas necessárias sem se sentir perdido.</p>
+          </div>
+
+          <div class="steps">
+            <article class="step">
+              <span class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <h3>Contato Imediato</h3>
+                <p>Você nos chama no WhatsApp, sem complicação.</p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <h3>Análise da Situação</h3>
+                <p>Ouvimos seu caso com empatia e sigilo absoluto.</p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 11h6M9 15h4M5 4h14v16H5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <h3>Direcionamento Estratégico</h3>
+                <p>Explicamos seus direitos de forma simples, sem juridiquês.</p>
+              </div>
+            </article>
+            <article class="step">
+              <span class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 7 9 18l-5-5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div>
+                <h3>Acompanhamento Próximo</h3>
+                <p>Iniciamos as medidas para regularizar divórcio, pensão ou guarda, mantendo você informado de cada passo.</p>
+              </div>
+            </article>
+          </div>
+          <div class="method-action">
+            <a class="button section-action" href="https://wa.me/5500000000000?text=Olá%2C%20quero%20entender%20os%20próximos%20passos%20para%20regularizar%20minha%20situação." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2a9.88 9.88 0 0 0-8.46 14.96L2.24 22l5.16-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.9 12.33 8.07 8.07 0 0 1-9.42 3.03l-.34-.15-3.16.8.82-3.08-.18-.36A8.08 8.08 0 0 1 12.04 3.8Zm-3.6 3.95c-.18 0-.47.07-.72.35-.25.27-.95.93-.95 2.26 0 1.34.98 2.63 1.11 2.82.14.18 1.9 3.04 4.75 4.14 2.37.93 2.85.75 3.36.7.52-.05 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.11-.26-.18-.54-.32-.27-.13-1.66-.82-1.91-.91-.26-.1-.45-.14-.64.13-.18.28-.73.91-.9 1.1-.16.18-.33.2-.6.06-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.66-1.55-1.94-.17-.27-.02-.42.12-.56.13-.12.28-.32.42-.48.13-.16.18-.27.27-.46.1-.18.05-.34-.02-.48-.07-.13-.62-1.53-.87-2.1-.23-.54-.46-.55-.64-.56h-.54Z"/>
+              </svg>
+              Falar com a equipe agora
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-grid">
+          <div>
+            <span class="section-kicker">Transparência</span>
+            <h2 class="section-title" id="faq-title">Dúvidas Frequentes</h2>
+            <p class="section-text">As principais preocupações aparecem antes mesmo do primeiro contato. Por isso, nosso atendimento começa com clareza sobre prazos, caminhos possíveis e honorários.</p>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>
+                O processo vai demorar muito?
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </summary>
+              <p>Atuamos com agilidade para buscar acordos e soluções rápidas, reduzindo ao máximo o tempo e o desgaste do conflito judicial.</p>
+            </details>
+            <details>
+              <summary>
+                É muito caro contratar um advogado agora?
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </summary>
+              <p>Sabemos que o momento exige planejamento. Nossos honorários são transparentes, justos e oferecemos facilidade de parcelamento em até 5x para que você tenha a defesa que merece.</p>
+            </details>
+            <details>
+              <summary>
+                Meu ex-parceiro não quer assinar o divórcio/acordo, e agora?
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </summary>
+              <p>Não se preocupe. Existem medidas legais para formalizar a separação e garantir a pensão ou guarda, mesmo sem a concordância imediata da outra parte. Nós cuidamos disso.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="final-title">
+        <div class="container final-content">
+          <div class="final-copy">
+            <span class="section-kicker">Atendimento agora</span>
+            <h2 class="section-title" id="final-title">A tranquilidade da sua família não pode esperar.</h2>
+            <p class="section-text">Ter a situação jurídica regularizada é o primeiro passo para reconstruir sua vida com paz e segurança. Nossa equipe está pronta para te atender agora.</p>
+          </div>
+          <a class="button" href="https://wa.me/5500000000000?text=Olá%2C%20quero%20falar%20com%20a%20equipe%20jurídica%20sobre%20direito%20de%20família." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2a9.88 9.88 0 0 0-8.46 14.96L2.24 22l5.16-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.9 12.33 8.07 8.07 0 0 1-9.42 3.03l-.34-.15-3.16.8.82-3.08-.18-.36A8.08 8.08 0 0 1 12.04 3.8Zm-3.6 3.95c-.18 0-.47.07-.72.35-.25.27-.95.93-.95 2.26 0 1.34.98 2.63 1.11 2.82.14.18 1.9 3.04 4.75 4.14 2.37.93 2.85.75 3.36.7.52-.05 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.11-.26-.18-.54-.32-.27-.13-1.66-.82-1.91-.91-.26-.1-.45-.14-.64.13-.18.28-.73.91-.9 1.1-.16.18-.33.2-.6.06-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.66-1.55-1.94-.17-.27-.02-.42.12-.56.13-.12.28-.32.42-.48.13-.16.18-.27.27-.46.1-.18.05-.34-.02-.48-.07-.13-.62-1.53-.87-2.1-.23-.54-.46-.55-.64-.56h-.54Z"/>
+            </svg>
+            Quero Falar com a Equipe Jurídica no WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span>Vinicio Rodrigues Advocacia · OAB/UF 000.000</span>
+        <span>Atendimento em direito de família com sigilo e transparência.</span>
+      </div>
+    </footer>
+
+    <div class="mobile-sticky" aria-label="Atalho para WhatsApp">
+      <a class="button" href="https://wa.me/5500000000000?text=Olá%2C%20preciso%20de%20orientação%20sobre%20pensão%2C%20guarda%20ou%20divórcio." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.04 2a9.88 9.88 0 0 0-8.46 14.96L2.24 22l5.16-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.9 12.33 8.07 8.07 0 0 1-9.42 3.03l-.34-.15-3.16.8.82-3.08-.18-.36A8.08 8.08 0 0 1 12.04 3.8Zm-3.6 3.95c-.18 0-.47.07-.72.35-.25.27-.95.93-.95 2.26 0 1.34.98 2.63 1.11 2.82.14.18 1.9 3.04 4.75 4.14 2.37.93 2.85.75 3.36.7.52-.05 1.67-.68 1.9-1.34.24-.66.24-1.22.17-1.34-.07-.11-.26-.18-.54-.32-.27-.13-1.66-.82-1.91-.91-.26-.1-.45-.14-.64.13-.18.28-.73.91-.9 1.1-.16.18-.33.2-.6.06-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.66-1.55-1.94-.17-.27-.02-.42.12-.56.13-.12.28-.32.42-.48.13-.16.18-.27.27-.46.1-.18.05-.34-.02-.48-.07-.13-.62-1.53-.87-2.1-.23-.54-.46-.55-.64-.56h-.54Z"/>
+        </svg>
+        WhatsApp Agora
+      </a>
+    </div>
+  </div>
+  <script>
+    const siteHeader = document.querySelector('.site-header');
+    const toggleHeader = () => {
+      siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+    };
+
+    toggleHeader();
+    window.addEventListener('scroll', toggleHeader, { passive: true });
+  </script>
+</body>
+</html>
